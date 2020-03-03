@@ -63,7 +63,8 @@ def sprite_lookup
     x: [ 7,  8],
     y: [ 7,  9],
     z: [ 7, 10],
-    '|' => [ 7, 12]
+    '|' => [ 7, 12],
+    'water' => [15, 7]
   }
 end
 
@@ -83,8 +84,10 @@ def member_name_as_code raw_member_name
   end
 end
 
-def tile x, y, tile_row_column_or_key
-  tile_extended x, y, DESTINATION_TILE_SIZE, DESTINATION_TILE_SIZE, TILE_R, TILE_G, TILE_B, TILE_A, tile_row_column_or_key
+def tile(x, y, tile, color)
+  tile_extended x, y,
+                DESTINATION_TILE_SIZE, DESTINATION_TILE_SIZE,
+                color[0], color[1], color[2], color[3], tile
 end
 
 def tile_extended x, y, w, h, r, g, b, a, tile_row_column_or_key

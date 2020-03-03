@@ -57,9 +57,9 @@ def tick_legend args
     [
       tile(1280 - TILE_SHEET_SIZE - legend_padding * 2 - SOURCE_TILE_SIZE,
             720 - legend_padding * 2 - (SOURCE_TILE_SIZE * i),
-            sprite(sprite_key)),
+            sprite(sprite_key), DEFAULT_COLOR),
       tile(1280 - TILE_SHEET_SIZE - SOURCE_TILE_SIZE + (SOURCE_TILE_SIZE * i),
-            720 - TILE_SHEET_SIZE - legend_padding * 3, sprite(sprite_key))
+            720 - TILE_SHEET_SIZE - legend_padding * 3, sprite(sprite_key), DEFAULT_COLOR)
     ]
   end
 end
