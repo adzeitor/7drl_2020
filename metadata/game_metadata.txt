@@ -1,6 +1,6 @@
-#devid=myname
-#devtitle=My Name
-#gameid=mygame
-#gametitle=My Game
-#version=0.1
-#icon=metadata/icon.png
+devid=teaclub
+devtitle=teaclub
+gameid=spaceduck
+gametitle=Rainbow duck space cadet
+version=0.1
+icon=metadata/icon.png

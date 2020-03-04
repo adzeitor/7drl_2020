@@ -1,7 +1,8 @@
 class Fire
   TILE_KEY = 'water'
-  def initialize x, y, dx, dy
-    @x, @y = x, y
+
+  def initialize pos, dx, dy
+    @pos = pos
     @dx,@dy = dx, dy
     @ticks = 0
     @color = RED.clone
@@ -10,8 +11,8 @@ class Fire
   def turn args
     @ticks += 1
 
-    @x += @dx
-    @y += @dy
+    @pos.x += @dx
+    @pos.y += @dy
     if @ticks >= 10
       @ticks = 0
       action args
@@ -23,10 +24,10 @@ class Fire
   end
 
   def render args
-    tile_in_game(@x, @y, TILE_KEY, @color)
+    tile_in_game(@pos.x, @pos.y, TILE_KEY, @color)
   end
 
   def collision x, y
-    @x == x && @y == y
+    @pos.x == x && @pos.y == y
   end
 end

@@ -45,9 +45,10 @@ def tick_game args
   args.state.player.y ||= 0
 
   args.state.enemies ||= [
-    Turret.new(5, 5),
-    Turret.new(5, 7),
-    Turret.new(5, 9),
+    Fire.new(Position.new(5,10), 1, 0)
+    Turret.new(Position.new(5, 5)),
+    Turret.new(Position.new(5, 7)),
+    Turret.new(Position.new(5, 9)),
   ]
 
 
